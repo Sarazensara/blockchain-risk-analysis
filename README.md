@@ -3,7 +3,7 @@
 A data-driven Python application that analyzes and visualizes potential risks in blockchain smart contracts using security flags. This project aims to identify patterns in smart contract vulnerabilities through exploratory data analysis and visual reporting.
 
 ---
-## Authot
+## Author
 
 Odette Saenz 
 Linkedin: https://www.linkedin.com/in/odettesaenz/

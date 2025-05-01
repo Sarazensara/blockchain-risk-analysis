@@ -1,7 +1,9 @@
-from load_data import load_dataset
-from analyze_advanced import advanced_frequency_analysis
-from visualize import plot_risk_frequencies
+# Import necessary functions from other modules
+from load_data import load_dataset  # Function to load datasets
+from analyze_advanced import advanced_frequency_analysis  # Function for advanced frequency analysis
+from visualize import plot_risk_frequencies  # Function to plot the risk frequencies
 
+# List of columns related to various blockchain risk factors
 risk_columns = [
     'Is_closed_source', 'hidden_owner', 'anti_whale_modifiable',
     'Is_anti_whale', 'Is_honeypot', 'buy_tax', 'sell_tax',
@@ -16,8 +18,15 @@ risk_columns = [
     'shadowing_local', 'events_maths'
 ]
 
+# Main execution block, ensures code runs only when executed directly
 if __name__ == '__main__':
+    # Load the dataset from the specified file path
     df = load_dataset('/Users/odettesaenz/Downloads/compiled_risk_data.csv')
+    
+    # Check if the dataset was loaded successfully
     if df is not None:
+        # Perform advanced frequency analysis on the selected risk columns
         frequencies = advanced_frequency_analysis(df, risk_columns)
+        
+        # Visualize the frequency of the risk flags using a bar chart
         plot_risk_frequencies(frequencies)
